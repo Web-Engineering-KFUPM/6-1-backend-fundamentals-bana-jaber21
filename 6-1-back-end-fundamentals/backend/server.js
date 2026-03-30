@@ -10,10 +10,8 @@ const port = 3000;
 
 
 // TODO 3: Allow React to access the server
-app.use((_req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:5173");
-    next();
-});
+import cors from "cors";
+app.use(cors());
 
 
 
