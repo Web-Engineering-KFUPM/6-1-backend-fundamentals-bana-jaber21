@@ -1,5 +1,6 @@
 // TODO 1: Import Express
 import express from "express";
+import cors from "cors";
 
 
 
@@ -10,7 +11,6 @@ const port = 3000;
 
 
 // TODO 3: Allow React to access the server
-import cors from "cors";
 app.use(cors());
 
 
@@ -32,12 +32,10 @@ app.get("/about", (req, res) => {
 
 // TODO 7: Create the "/student" route
 app.get("/student", (req, res) => {
-    const student = {
+    res.json({
         name: "John Doe",
-        age: 20,
         major: "Computer Science"
-    };
-    res.json(student);
+    });
 }); 
 
 
